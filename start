@@ -6,10 +6,10 @@ _get_ziplink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "zel" ]]
     then
-        echo "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=" | base64 -d
+        echo "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=" | base64 -d
     elif [[ $UPSTREAM_REPO == "beta" ]]
     then
-        echo "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=" | base64 -d
+        echo "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=" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
@@ -19,7 +19,7 @@ _get_ziplink () {
             echo "${UPSTREAM_REPO}/archive/master.zip"
         fi
     else
-        echo "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=" | base64 -d
+        echo "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=" | base64 -d
     fi
 }
 
@@ -29,15 +29,15 @@ _get_repolink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "zel" ]]
     then
-        rlink=`echo "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==" | base64 -d`
+        rlink=`echo "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==" | base64 -d`
     elif [[ $UPSTREAM_REPO == "beta" ]]
     then
-        rlink=`echo "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==" | base64 -d`
+        rlink=`echo "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==" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=`echo "${UPSTREAM_REPO}"`
     else
-        rlink=`echo "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==" | base64 -d`
+        rlink=`echo "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==" | base64 -d`
     fi
     echo "$rlink"
 }
